@@ -14,12 +14,12 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  const DemoVault = await ethers.getContractFactory("DemoVault");
-  const demoVault = await DemoVault.deploy('0x6eD79Aa1c71FD7BdBC515EfdA3Bd4e26394435cC', '0xA94B7f0465E98609391C623d0560C5720a3f2D33','0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B','0x0E696947A06550DEf604e82C26fd9E493e576337','0x67B5656d60a809915323Bf2C40A8bEF15A152e3e');
+  const OpynVault = await ethers.getContractFactory("OpynVault");
+  const opynVault = await OpynVault.deploy('0x6eD79Aa1c71FD7BdBC515EfdA3Bd4e26394435cC', '0xA94B7f0465E98609391C623d0560C5720a3f2D33', '0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B', '0x0E696947A06550DEf604e82C26fd9E493e576337', '0x67B5656d60a809915323Bf2C40A8bEF15A152e3e');
 
-  await demoVault.deployed();
+  await opynVault.deployed();
 
-  console.log("DemoVault deployed to:", demoVault.address);
+  console.log("Opyn deployed to:", opynVault.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
